@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Boxicon link -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+
+    <!-- Style link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="weather-main-container">
+
+        <div class="weather-serach">
+            <i class='bx bxs-map'></i>
+            <input type="text" name="city" id="input" placeholder="enter city name">
+            <button class='bx bx-search'></button>
+        </div>
+
+        <p id="hide-city"></p>
+
+
+        <div class="outer-weather-div">
+
+            <div class="weather-box">
+                <div class="weather-info">
+                    <img src="weather.png" alt="Weather img">
+                    <p class="temperature">0 <span>°C</span> </p>
+                    <p class="description">Broken Clouds</p>
+                </div>
+            </div>
+
+
+            <div class="weather-details">
+                <div class="Humidity-box  Box">
+                    <i class='bx bx-water'></i>
+                    <div class="Humidity-text Weather-text">
+                        <p>0%</p>
+                        <span>Humidity</span>
+                    </div>
+                </div>
+
+                <div class="Wind-box  Box">
+                    <i class='bx bx-wind'></i>
+                    <div class="Wind-text Weather-text">
+                        <p class="km">0Km/h</p>
+                        <span> Wind Speed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="not-found-div">
+
+                <div class="not-found">
+                    <img src="404.png" alt="Not Found">
+                    <p>Oops! wrong city name</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

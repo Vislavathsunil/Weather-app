@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+
+.weather-main-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 30vw;
+    height: 12vh;
+    padding: 20px;
+    background: rgb(255, 255, 255, .1);
+    border-radius: 15px;
+    border: 2px solid rgb(255, 255, 255, .2);
+    backdrop-filter: blur(30px);
+    transition: height .6s ease;
+}
+
+.weather-serach {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.weather-serach i {
+    font-size: 28px;
+    padding-left: 10px;
+    color: white;
+}
+
+
+.weather-serach input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 0px 50px 0px;
+    text-transform: uppercase;
+    outline: none;
+    color: white;
+    background: rgb(255, 255, 255, .1);
+    border: 2px solid rgb(255, 255, 255, .2);
+}
+
+
+
+
+.weather-serach input::placeholder {
+    color: rgb(22, 20, 20);
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.weather-serach button {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 40px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    padding: 0px 12px 0px 0px;
+    cursor: pointer;
+    color: white;
+}
+
+
+.weather-details {
+    position: relative;
+}
+
+.weather-box {
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+.weather-info img {
+    width: 220px;
+    height: 220px;
+}
+
+.weather-info p {
+    color: white;
+    padding-top: 20px;
+
+}
+
+
+/* Invisibility */
+
+
+
+
+.temperature {
+    position: relative;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.temperature span {
+    position: absolute;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.description {
+    font-size: 22px;
+    padding: 15px 0px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+
+
+/* weather-details */
+
+.weather-details {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0px 10px;
+}
+
+
+
+.weather-details .Box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 22px 0px;
+}
+
+.weather-details i {
+    font-size: 50px;
+}
+
+.Weather-text span {
+    display: inline-block;
+    padding-top: 10px;
+}
+
+/* Not Found styling */
+
+
+
+.not-found-div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 125px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* .not-found {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 125px;
+    text-align: center;
+    width: 100%;
+} */
+
+
+.not-found p {
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+
+
+.not-found img {
+    width: 70%;
+    height: 230px;
+}
+
+
+
+/* Transform */
+
+.weather-details {
+    transform: translateY(100%);
+}
+
+.weather-box,
+.not-found {
+    transform: translateY(-100%);
+}
+
+/* Hidden */
+
+.outer-weather-div {
+    overflow: hidden;
+}
+
+.weather-box,
+.weather-details,
+.not-found {
+    visibility: hidden;
+}
+
+.weather-box.active,
+.weather-details.active,
+.not-found.active {
+    visibility: visible;
+    transform: translateY(0%);
+    transition: transform .6s ease;
+    transition-delay: .4s;
+}
+
+
+
+
+/* Media Queries */
+
+@media only screen and (min-width:345px) and (max-width:480px) {
+
+    body {
+        height: 100vh;
+    }
+
+    .weather-main-container {
+        width: 95vw;
+        height: 13.5vh;
+    }
+
+    .weather-info img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .weather-details i {
+        font-size: 35px;
+    }
+
+    .weather-serach input {
+        font-size: 16px;
+    }
+
+    .weather-serach input::placeholder {
+        font-size: 16px;
+    }
+
+    .not-found img {
+        width: 60%;
+        height: 182px;
+    }
+
+}
+
+
+@media only screen and (min-width:482px) and (max-width:1000px) {
+    .weather-main-container {
+        width: 66vw;
+        height: 62vh;
+    }
+}
